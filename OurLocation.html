@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script> 
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style-sheet.css">
+
+    <title>RMA - Our Location</title>
+    <link rel='icon' type='image/jpg' href="images/Logo/FaviconLogo.jpg">
+
+    <style>
+        /* Specific styles for this page to integrate well with existing theme */
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 75%; /* 4:3 Aspect Ratio, common for embedded maps */
+            position: relative;
+            height: 0;
+            border-radius: .25rem; /* Match Bootstrap card radius */
+        }
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 0; /* Remove default iframe border */
+            border-radius: .25rem;
+        }
+        .card-title {
+            color: black; /* Assuming a primary blue from your theme */
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .info-section {
+            padding: 1rem;
+        }
+        .info-section h5 {
+            color: #343a40; /* Darker grey for subheadings */
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .info-section p, .info-section ul {
+            color: #495057;
+            font-size: 0.95rem;
+        }
+        .info-section ul {
+            list-style: none; /* Remove default list bullets */
+            padding-left: 0;
+        }
+        .info-section ul li {
+            margin-bottom: 0.4rem;
+        }
+        .info-section i {
+            color: black; /* Icon color */
+            margin-right: 0.5rem;
+            width: 20px; /* Consistent icon spacing */
+            text-align: center;
+        }
+        .text-muted-small {
+            font-size: 0.85em;
+            color: #6c757d;
+        }
+
+        /* --- NEW CSS TO ENSURE VISIBILITY --- */
+        /* This targets specifically the contact info links within the .info-section */
+        .info-section p a {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: inline !important; /* or block, if they are meant to be on separate lines */
+        }
+        /* If the parent 'p' tag itself is hidden, target that */
+        .info-section p.contact-link-wrapper { /* You'd add this class to the p tag in HTML */
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+        /* If the entire .info-section needs to be forced visible */
+        .info-section {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+        /* It's less likely, but if the .card-body or .col-md-5 is hidden */
+        .col-md-5 .card-body {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div id="menu">
+            </div>
+    </nav>
+
+    <br><br>
+
+    <div class="container-md">
+        <h2 class="text-center mb-4">Our Location & Hours</h2>
+
+        <div class="card mb-3" style="max-width: 1000px; margin: auto;">
+            <div class="row no-gutters">
+                <div class="col-md-7">
+                    <div class="info-section">
+                        <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> Find Us On The Map</h5>
+                        <div class="map-container mb-4">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6918.233952277354!2d-95.41357442378201!3d29.889729875001986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c83ef4a1f6c7%3A0x5a2275dfd46de43a!2s9030%20North%20Fwy%2C%20Houston%2C%20TX%2077037!5e0!3m2!1sen!2sus!4v1750374968365!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <p class="card-text text-muted-small">Please note: The map above is for illustrative purposes. For precise directions, please use a navigation app.</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card-body info-section">
+                        <h5 class="card-title"><i class="far fa-clock"></i> Our Business Hours</h5>
+                        <ul class="list-unstyled">
+                            <li><strong>Monday:</strong> 10:00 AM - 7:00 PM</li>
+                            <li><strong>Tuesday:</strong> 10:00 AM - 7:00 PM</li>
+                            <li><strong>Wednesday:</strong> 10:00 AM - 7:00 PM</li>
+                            <li><strong>Thursday:</strong> 10:00 AM - 7:00 PM</li>
+                            <li><strong>Friday:</strong> 10:00 AM - 7:00 PM</li>
+                            <li><strong>Saturday:</strong> 10:00 AM - 6:00 PM</li>
+                            <li><strong>Sunday:</strong> Closed</li>
+                        </ul>
+
+                        <h5 class="card-title mt-4"><i class="fas fa-phone-alt"></i> Contact Us</h5>
+                        <p><strong>Address:</strong><br>
+                           9030 N Freeway<br>
+                           Suite 209<br>
+                           Houston, TX 77037</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <footer>
+        <div id='footer'>
+            </div>
+    </footer>
+
+    <link rel="javascript" href="Public/js/script.js" /> <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script> 
+        $(function(){
+            $("#menu").load("assets/components/headerNav.html"); 
+            $("#footer").load("assets/components/footer.html"); 
+        });
+    </script> 
+
+    <script src="Public/js/script.js"></script> 
+</body>
+</html>
