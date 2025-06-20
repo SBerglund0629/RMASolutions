@@ -11,7 +11,7 @@ a {
 #requestQuote {
     float: right;
     margin-top: 5%;
-    
+
 }
 
 button.btn.btn-info.contactUs {
@@ -26,8 +26,8 @@ button.btn.btn-info.contactUs {
     margin-bottom: 0% !important;
     padding-bottom: 0% !important;
     text-align: left;
-    
-    
+
+
 }
 
 #goIns {
@@ -53,7 +53,7 @@ button.btn.btn-info.contactUs {
 .footer {
     width: 100%;
 }
-.f1 {    
+.f1 {
     padding: 0;
     margin: 0;
     color: whitesmoke;
@@ -72,7 +72,7 @@ button.btn.btn-info.contactUs {
     min-width: 300px;
     width: 33%;
     color: whitesmoke;
-    
+
 
 }
 
@@ -86,7 +86,7 @@ font-size: 14px;
 }
 
 a {
-    color: white;
+    color: white; /* This rule for 'a' tag is overridden by later ones for specific links. If you intend for all 'a' tags to be white in the footer but black elsewhere, you'll need more specific selectors. This is okay for now, just a note. */
 }
 
 .dropdown-menu {
@@ -97,7 +97,7 @@ hr {
     border: 0;
     clear:both;
     display:block;
-    width: 50%;               
+    width: 50%;
     background-color:whitesmoke;
     height: 1px;
 }
@@ -122,7 +122,7 @@ color: whitesmoke;
 }
 
 /* ContactUs*/
-.btn-info  {
+.btn-info {
     background-color: #AAB7BB;
 }
 
@@ -148,7 +148,7 @@ div.spanish.seHabla {
     font-size: medium;
     font-weight: bolder;
     margin-top: 1%;
-    
+
     overflow-x: auto;
 }
 
@@ -158,8 +158,8 @@ div.spanish.seHabla {
 #navBar {
     background-color: #AAB7BB !important;
     color: whitesmoke !important;
-    
-    
+
+
 }
 .email{
     color: black !important;
@@ -211,6 +211,64 @@ span.navbar-toggler-icon,
     .navbar-expand-lg .navbar-nav .dropdown .dropdown-toggle:active {
         pointer-events: none; /* Prevents sticky click on desktop */
     }
+} /* <--- THIS IS THE MISSING CLOSING BRACE! */
+
+
+/* Now, the navbar thinning CSS will apply globally, not just inside the media query */
+/*
+ * Custom CSS for Navbar Thickness
+ * Add these rules to your css/style-sheet.css
+ */
+
+#navBar {
+    /* Reduce vertical padding on the entire navbar */
+    padding-top: 0.2rem; /* Adjusted from 0.25rem for more thinness */
+    padding-bottom: 0.2rem; /* Adjusted from 0.25rem for more thinness */
+    /* If still not thin enough, you can try min-height, but padding is preferred */
+    /* min-height: 45px; */ /* Example: adjust as needed */
+}
+
+#navBar .navbar-nav .nav-link {
+    /* Reduce vertical padding on individual nav links */
+    padding-top: 0.3rem; /* Adjusted from 0.5rem for more thinness */
+    padding-bottom: 0.3rem; /* Adjusted from 0.5rem for more thinness */
+    font-size: 0.9rem; /* Slightly smaller font if desired, adjusted from 0.95rem */
+    line-height: 1; /* Helps collapse vertical space */
+}
+
+/* For dropdowns, also adjust padding or font size */
+#navBar .dropdown-menu .dropdown-item {
+    padding-top: 0.4rem; /* Adjusted from 0.5rem */
+    padding-bottom: 0.4rem; /* Adjusted from 0.5rem */
+    font-size: 0.85rem; /* Smaller font for dropdown items */
+}
+
+/* Optionally, if you have a brand/logo in the navbar and it's making it too tall */
+#navBar .navbar-brand {
+    padding-top: 0.2rem; /* Consistent with navbar padding */
+    padding-bottom: 0.2rem; /* Consistent with navbar padding */
+    height: auto;
+    max-height: 40px; /* Example max height for a logo */
+}
+
+/* Ensure the toggler icon doesn't add extra height */
+#navBar .navbar-toggler {
+    padding: 0.2rem 0.5rem; /* Reduce padding around the toggler icon */
+}
+
+/* If the above still doesn't work, you might need to use !important (use sparingly) */
+/*
+#navBar {
+    padding-top: 0.2rem !important;
+    padding-bottom: 0.2rem !important;
+}
+
+#navBar .navbar-nav .nav-link {
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
+}
+*/
+
 
 .bottom {
     background-color: #AAB7BB !important;
@@ -226,7 +284,7 @@ span.navbar-toggler-icon,
 }
 
 
-/*  Renters Page*/
+/* Renters Page*/
 
 .rentersIns {
     font-weight: bold;
@@ -242,7 +300,7 @@ span.navbar-toggler-icon,
 
 .spanish {
     word-wrap: break-word;
-    
+
 }
 
 /*Auto Req Form*/
@@ -278,7 +336,7 @@ span.navbar-toggler-icon,
 }
 
 .card-text {
-    margin-bottom:  0%;
+    margin-bottom: 0%;
 }
 
 #emailCU {
@@ -322,7 +380,7 @@ ol {
     padding:0;
     counter-reset:item;
 }
-    
+
 ol>li {
     margin:0;
     padding:0 0 0 2em;
@@ -364,8 +422,8 @@ ol>li:before {
 }
 
 .hero-section {
-  padding-top: 0;
-  padding-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 
@@ -409,13 +467,13 @@ margin: 0 auto;
 
 
 .welcome-text {
-  color: #5F4B38; 
-  font-weight: bold;
-  font-size: 2em; /* Reduced from 2.5em */
-  margin-bottom: 10px;
-  white-space: nowrap; /* Prevents line break */
-  overflow: hidden;
-  text-overflow: ellipsis;
+    color: #5F4B38;
+    font-weight: bold;
+    font-size: 2em; /* Reduced from 2.5em */
+    margin-bottom: 10px;
+    white-space: nowrap; /* Prevents line break */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -443,20 +501,20 @@ margin-bottom: 30px;
 
 
 .btn-get-a-quote {
-  background-color: #AAB7BB; 
-  color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1.1em;
-  display: inline-block;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #AAB7BB;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-get-a-quote:hover {
-  background-color: #E4D6B8;
-  color: #5F4B38;             
+    background-color: #E4D6B8;
+    color: #5F4B38;
 }
 
 
@@ -491,9 +549,62 @@ The second percentage (100% here) is where it becomes fully transparent.*/
 }
 
 @media (max-width: 768px) {
-  .sub-text {
-    white-space: normal;
-    font-size: 1em;
-  }
+    .sub-text {
+        white-space: normal;
+        font-size: 1em;
+    }
+} /* <--- Added this missing closing brace */
+
+/*
+ * Custom CSS for Navbar Thickness
+ * Add these rules to your css/style-sheet.css
+ */
+
+#navBar {
+    /* Reduce vertical padding on the entire navbar */
+    padding-top: 0.2rem; /* Adjusted from 0.25rem for more thinness */
+    padding-bottom: 0.2rem; /* Adjusted from 0.25rem for more thinness */
+    /* If still not thin enough, you can try min-height, but padding is preferred */
+    /* min-height: 45px; */ /* Example: adjust as needed */
 }
+
+#navBar .navbar-nav .nav-link {
+    /* Reduce vertical padding on individual nav links */
+    padding-top: 0.3rem; /* Adjusted from 0.5rem for more thinness */
+    padding-bottom: 0.3rem; /* Adjusted from 0.5rem for more thinness */
+    font-size: 0.9rem; /* Slightly smaller font if desired, adjusted from 0.95rem */
+    line-height: 1; /* Helps collapse vertical space */
 }
+
+/* For dropdowns, also adjust padding or font size */
+#navBar .dropdown-menu .dropdown-item {
+    padding-top: 0.4rem; /* Adjusted from 0.5rem */
+    padding-bottom: 0.4rem; /* Adjusted from 0.5rem */
+    font-size: 0.85rem; /* Smaller font for dropdown items */
+}
+
+/* Optionally, if you have a brand/logo in the navbar and it's making it too tall */
+#navBar .navbar-brand {
+    padding-top: 0.2rem; /* Consistent with navbar padding */
+    padding-bottom: 0.2rem; /* Consistent with navbar padding */
+    height: auto;
+    max-height: 40px; /* Example max height for a logo */
+}
+
+/* Ensure the toggler icon doesn't add extra height */
+#navBar .navbar-toggler {
+    padding: 0.2rem 0.5rem; /* Reduce padding around the toggler icon */
+}
+
+/* If the above still doesn't work, you might need to use !important (use sparingly) */
+/*
+#navBar {
+    padding-top: 0.2rem !important;
+    padding-bottom: 0.2rem !important;
+}
+
+#navBar .navbar-nav .nav-link {
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
+}
+*/
