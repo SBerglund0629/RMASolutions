@@ -337,6 +337,11 @@ span.navbar-toggler-icon,
 
 .card-text {
     margin-bottom: 0%;
+    color: black;
+}
+
+.card-body {
+    color: #333 !important; /* or black if preferred */
 }
 
 #emailCU {
